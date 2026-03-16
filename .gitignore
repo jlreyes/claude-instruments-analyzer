@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Instruments traces (large binary files)
+*.trace
+traces/
+
+# DuckDB databases
+*.duckdb
+*.duckdb.wal
+
+# Parquet output
+*.parquet
