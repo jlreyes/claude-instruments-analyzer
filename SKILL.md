@@ -1,19 +1,19 @@
 ---
-name: claude-instruments
-description: Gives Claude programmatic access to Apple Instruments trace data by exporting .trace files to DuckDB. Covers recording traces, exporting to DuckDB, exploring exported tables, and running analysis scripts.
+name: instruments-analyzer
+description: Gives AI agents programmatic access to Apple Instruments trace data by exporting .trace files to DuckDB. Covers recording traces, exporting to DuckDB, exploring exported tables, and running analysis scripts.
 ---
 
-# Claude Instruments Analyzer
+# Instruments Analyzer
 
-This skill gives you programmatic access to Apple Instruments trace data. Instruments is normally a GUI tool — this skill bridges the gap by exporting `.trace` files into DuckDB, where you can query them with SQL.
+This tool gives you programmatic access to Apple Instruments trace data. Instruments is normally a GUI tool — this tool bridges the gap by exporting `.trace` files into DuckDB, where you can query them with SQL.
 
 ---
 
-## When to use this skill
+## When to use this tool
 
-- The user has (or wants to record) an Instruments `.trace` file
-- They want to analyze performance data: CPU profiling, hitches, hangs, signposts, Core Animation, SwiftUI updates, RunLoop activity, etc.
-- They want root-cause analysis backed by frame-level or event-level evidence
+- You have (or want to record) an Instruments `.trace` file
+- You want to analyze performance data: CPU profiling, hitches, hangs, signposts, Core Animation, SwiftUI updates, RunLoop activity, etc.
+- You want root-cause analysis backed by frame-level or event-level evidence
 
 **For scroll & animation jank diagnosis**: See [scroll_and_animation.md](scroll_and_animation.md) — a frame-first workflow for isolating interaction windows, ranking dropped frames, cascade analysis, per-frame attribution, and producing a prioritized fix plan.
 
@@ -207,6 +207,6 @@ This outputs:
 - Convert: `duration_ns / 1e6` for milliseconds, `start_ns / 1e9` for seconds
 - `os_signpost_*` timestamps are strings — cast to BIGINT when comparing
 
-## Use-case companion skills
+## Use-case companion resources
 
 - [scroll_and_animation.md](scroll_and_animation.md) — SwiftUI scroll and animation jank diagnosis
