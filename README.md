@@ -16,7 +16,7 @@ Given an Instruments `.trace` file, this tool will:
 ### As a Claude Code skill
 
 ```bash
-claude install-skill jlreyes/claude-instruments-analyzer
+claude install-skill jlreyes/instruments-analyzer
 ```
 
 ### Manual
@@ -24,14 +24,14 @@ claude install-skill jlreyes/claude-instruments-analyzer
 Clone and copy the skill files into your project's `.claude/skills/` directory:
 
 ```bash
-git clone https://github.com/jlreyes/claude-instruments-analyzer.git
+git clone https://github.com/jlreyes/instruments-analyzer.git
 cp -r claude-instruments-analyzer/. your-project/.claude/skills/instruments-analyzer/
 ```
 
 ### Standalone (for use with any AI agent or CLI)
 
 ```bash
-git clone https://github.com/jlreyes/claude-instruments-analyzer.git
+git clone https://github.com/jlreyes/instruments-analyzer.git
 cd claude-instruments-analyzer
 ```
 
