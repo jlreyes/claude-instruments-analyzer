@@ -70,7 +70,7 @@ This skill provides the foundation. Companion skills build on it for specific di
 
 | Skill | Description |
 |-------|-------------|
-| [swiftui-scroll-animation](https://github.com/jlreyes/swiftui-scroll-animation) | SwiftUI scroll and animation jank diagnosis — frame-first workflow with interaction windowing, severity buckets, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans |
+| [swiftui-jank-diagnostics](https://github.com/jlreyes/swiftui-jank-diagnostics) | SwiftUI scroll and animation jank diagnosis — frame-first workflow with interaction windowing, severity buckets, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans |
 
 ## Requirements
 
