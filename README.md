@@ -1,4 +1,4 @@
-# Claude Instruments
+# Claude Instruments Analyzer
 
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that gives Claude programmatic access to Apple Instruments trace data. Instruments is normally a GUI-only tool — this skill bridges the gap by exporting `.trace` files into DuckDB, where they can be queried with SQL.
 

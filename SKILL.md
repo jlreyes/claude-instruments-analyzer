@@ -3,7 +3,7 @@ name: claude-instruments
 description: Gives Claude programmatic access to Apple Instruments trace data by exporting .trace files to DuckDB. Covers recording traces, exporting to DuckDB, exploring exported tables, and running analysis scripts.
 ---
 
-# Claude Instruments
+# Claude Instruments Analyzer
 
 This skill gives you programmatic access to Apple Instruments trace data. Instruments is normally a GUI tool — this skill bridges the gap by exporting `.trace` files into DuckDB, where you can query them with SQL.
 
