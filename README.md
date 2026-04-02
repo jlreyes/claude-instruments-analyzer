@@ -16,7 +16,7 @@ Given an Instruments `.trace` file, this skill will:
 ### As a Claude Code skill
 
 ```bash
-claude install-skill jlreyes/claude-instruments
+claude install-skill jlreyes/claude-instruments-analyzer
 ```
 
 ### Manual
@@ -24,8 +24,8 @@ claude install-skill jlreyes/claude-instruments
 Clone and copy the skill files into your project's `.claude/skills/` directory:
 
 ```bash
-git clone https://github.com/jlreyes/claude-instruments.git
-cp -r claude-instruments/. your-project/.claude/skills/claude-instruments/
+git clone https://github.com/jlreyes/claude-instruments-analyzer.git
+cp -r claude-instruments-analyzer/. your-project/.claude/skills/claude-instruments-analyzer/
 ```
 
 ## Usage
