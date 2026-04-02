@@ -25,14 +25,14 @@ Clone and copy the skill files into your project's `.claude/skills/` directory:
 
 ```bash
 git clone https://github.com/jlreyes/instruments-analyzer.git
-cp -r claude-instruments-analyzer/. your-project/.claude/skills/instruments-analyzer/
+cp -r instruments-analyzer/. your-project/.claude/skills/instruments-analyzer/
 ```
 
 ### Standalone (for use with any AI agent or CLI)
 
 ```bash
 git clone https://github.com/jlreyes/instruments-analyzer.git
-cd claude-instruments-analyzer
+cd instruments-analyzer
 ```
 
 ## Usage
