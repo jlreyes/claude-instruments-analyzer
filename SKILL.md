@@ -15,7 +15,7 @@ This skill gives you programmatic access to Apple Instruments trace data. Instru
 - They want to analyze performance data: CPU profiling, hitches, hangs, signposts, Core Animation, SwiftUI updates, RunLoop activity, etc.
 - They want root-cause analysis backed by frame-level or event-level evidence
 
-For specialized diagnosis workflows, see use-case companion skills such as [swiftui-jank-diagnostics](https://github.com/jlreyes/swiftui-jank-diagnostics).
+**For scroll & animation jank diagnosis**: See [scroll_and_animation.md](scroll_and_animation.md) — a frame-first workflow for isolating interaction windows, ranking dropped frames, cascade analysis, per-frame attribution, and producing a prioritized fix plan.
 
 ---
 
@@ -209,4 +209,4 @@ This outputs:
 
 ## Use-case companion skills
 
-- [swiftui-jank-diagnostics](https://github.com/jlreyes/swiftui-jank-diagnostics) — SwiftUI scroll and animation jank diagnosis
+- [scroll_and_animation.md](scroll_and_animation.md) — SwiftUI scroll and animation jank diagnosis

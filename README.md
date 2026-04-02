@@ -63,14 +63,7 @@ Analyze the performance trace in traces/recording/analysis.duckdb.
 | `scripts/export_to_duckdb.py` | Exports Instruments `.trace` to DuckDB + Parquet |
 | `scripts/prepare_analysis.py` | Creates analysis views, frame summaries, cascade analysis |
 | `PerfDebugging.tracetemplate` | Instruments template for recording traces |
-
-## Use-case companion skills
-
-This skill provides the foundation. Companion skills build on it for specific diagnosis workflows:
-
-| Skill | Description |
-|-------|-------------|
-| [swiftui-jank-diagnostics](https://github.com/jlreyes/swiftui-jank-diagnostics) | SwiftUI scroll and animation jank diagnosis — frame-first workflow with interaction windowing, severity buckets, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans |
+| `scroll_and_animation.md` | Jank diagnosis workflow — interaction windowing, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans. Loaded by Claude when the user asks about scroll or animation performance. |
 
 ## Requirements
 
