@@ -13,10 +13,21 @@ Given an Instruments `.trace` file, this tool will:
 
 ## Install
 
-### As a Claude Code skill
+Requires macOS with Xcode, [uv](https://github.com/astral-sh/uv), and [DuckDB](https://duckdb.org):
 
 ```bash
+brew install duckdb
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### As an agent skill
+
+```bash
+# Claude Code
 claude install-skill jlreyes/instruments-analyzer
+
+# Any agent (via skills.sh)
+npx skills add jlreyes/instruments-analyzer
 ```
 
 ### Manual
@@ -53,8 +64,6 @@ Or use the included `PerfDebugging.tracetemplate` in Instruments.
 ./scripts/export_to_duckdb.py traces/recording.trace traces/recording/analysis.duckdb
 ```
 
-Requires [uv](https://github.com/astral-sh/uv) (dependencies are managed inline via PEP 723).
-
 ### 3. Analyze with your tool of choice
 
 ```bash
@@ -76,12 +85,6 @@ SELECT * FROM hitches ORDER BY duration_ns DESC LIMIT 10;
 | `scripts/prepare_analysis.py` | Creates analysis views, frame summaries, cascade analysis |
 | `PerfDebugging.tracetemplate` | Instruments template for recording traces |
 | `scroll_and_animation.md` | Jank diagnosis workflow — interaction windowing, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans. |
-
-## Requirements
-
-- macOS with Xcode / Instruments
-- [uv](https://github.com/astral-sh/uv) (for running the Python scripts)
-- DuckDB (for querying; can be used standalone or with any AI agent)
 
 ## License
 
