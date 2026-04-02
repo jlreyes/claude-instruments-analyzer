@@ -1,10 +1,10 @@
-# Claude Instruments Analyzer
+# Instruments Analyzer
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that gives Claude programmatic access to Apple Instruments trace data. Instruments is normally a GUI-only tool — this skill bridges the gap by exporting `.trace` files into DuckDB, where they can be queried with SQL.
+A tool that gives AI agents programmatic access to Apple Instruments trace data. Instruments is normally a GUI-only tool — this tool bridges the gap by exporting `.trace` files into DuckDB, where they can be queried with SQL.
 
 ## What it does
 
-Given an Instruments `.trace` file, this skill will:
+Given an Instruments `.trace` file, this tool will:
 
 1. **Export** the trace to DuckDB + Parquet (via `export_to_duckdb.py`)
 2. **Explore** the exported tables — CPU profiling, hitches, hangs, signposts, Core Animation, SwiftUI updates, RunLoop activity, and more
@@ -25,7 +25,14 @@ Clone and copy the skill files into your project's `.claude/skills/` directory:
 
 ```bash
 git clone https://github.com/jlreyes/claude-instruments-analyzer.git
-cp -r claude-instruments-analyzer/. your-project/.claude/skills/claude-instruments-analyzer/
+cp -r claude-instruments-analyzer/. your-project/.claude/skills/instruments-analyzer/
+```
+
+### Standalone (for use with any AI agent or CLI)
+
+```bash
+git clone https://github.com/jlreyes/claude-instruments-analyzer.git
+cd claude-instruments-analyzer
 ```
 
 ## Usage
@@ -48,10 +55,15 @@ Or use the included `PerfDebugging.tracetemplate` in Instruments.
 
 Requires [uv](https://github.com/astral-sh/uv) (dependencies are managed inline via PEP 723).
 
-### 3. Ask Claude to analyze
+### 3. Analyze with your tool of choice
 
-```
-Analyze the performance trace in traces/recording/analysis.duckdb.
+```bash
+# Use with Claude Code
+# Analyze the performance trace in traces/recording/analysis.duckdb.
+
+# Or query directly with DuckDB
+duckdb traces/recording/analysis.duckdb
+SELECT * FROM hitches ORDER BY duration_ns DESC LIMIT 10;
 ```
 
 ## What's included
@@ -63,13 +75,13 @@ Analyze the performance trace in traces/recording/analysis.duckdb.
 | `scripts/export_to_duckdb.py` | Exports Instruments `.trace` to DuckDB + Parquet |
 | `scripts/prepare_analysis.py` | Creates analysis views, frame summaries, cascade analysis |
 | `PerfDebugging.tracetemplate` | Instruments template for recording traces |
-| `scroll_and_animation.md` | Jank diagnosis workflow — interaction windowing, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans. Loaded by Claude when the user asks about scroll or animation performance. |
+| `scroll_and_animation.md` | Jank diagnosis workflow — interaction windowing, cascade analysis, per-frame attribution, root cause clustering, and prioritized fix plans. |
 
 ## Requirements
 
 - macOS with Xcode / Instruments
 - [uv](https://github.com/astral-sh/uv) (for running the Python scripts)
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+- DuckDB (for querying; can be used standalone or with any AI agent)
 
 ## License
 
